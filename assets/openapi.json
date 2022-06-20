@@ -1,0 +1,274 @@
+{
+  "openapi": "3.0.2",
+  "info": { "title": "FastAPI", "version": "0.1.0" },
+  "paths": {
+    "/vehicles": {
+      "get": {
+        "summary": "Vehicles",
+        "operationId": "vehicles_vehicles_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Vehicles Vehicles Get",
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Vehicle" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/drivers": {
+      "get": {
+        "summary": "Drivers",
+        "operationId": "drivers_drivers_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Drivers Drivers Get",
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Driver" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CurrentDriver": {
+        "title": "CurrentDriver",
+        "type": "object",
+        "properties": {
+          "id": { "title": "Id", "type": "integer" },
+          "first_name": { "title": "First Name", "type": "string" },
+          "last_name": { "title": "Last Name", "type": "string" },
+          "username": { "title": "Username", "type": "string" },
+          "email": { "title": "Email", "type": "string" },
+          "driver_company_id": {
+            "title": "Driver Company Id",
+            "type": "string"
+          },
+          "status": { "title": "Status", "type": "string" },
+          "role": { "title": "Role", "type": "string" }
+        }
+      },
+      "Driver": {
+        "title": "Driver",
+        "type": "object",
+        "properties": {
+          "id": { "title": "Id", "type": "integer" },
+          "email": { "title": "Email", "type": "string" },
+          "first_name": { "title": "First Name", "type": "string" },
+          "last_name": { "title": "Last Name", "type": "string" },
+          "phone": { "title": "Phone", "type": "string" },
+          "phone_ext": { "title": "Phone Ext", "type": "string" },
+          "time_zone": { "title": "Time Zone", "type": "string" },
+          "carrier_name": { "title": "Carrier Name", "type": "string" },
+          "carrier_street": { "title": "Carrier Street", "type": "string" },
+          "carrier_city": { "title": "Carrier City", "type": "string" },
+          "carrier_state": { "title": "Carrier State", "type": "string" },
+          "carrier_zip": { "title": "Carrier Zip", "type": "integer" },
+          "violation_alerts": { "title": "Violation Alerts", "type": "string" },
+          "terminal_street": { "title": "Terminal Street", "type": "string" },
+          "terminal_city": { "title": "Terminal City", "type": "string" },
+          "terminal_state": { "title": "Terminal State", "type": "string" },
+          "terminal_zip": { "title": "Terminal Zip", "type": "integer" },
+          "exception_24_hour_restart": {
+            "title": "Exception 24 Hour Restart",
+            "type": "boolean"
+          },
+          "exception_8_hour_break": {
+            "title": "Exception 8 Hour Break",
+            "type": "boolean"
+          },
+          "exception_wait_time": {
+            "title": "Exception Wait Time",
+            "type": "boolean"
+          },
+          "exception_short_haul": {
+            "title": "Exception Short Haul",
+            "type": "boolean"
+          },
+          "exception_ca_farm_school_bus": {
+            "title": "Exception Ca Farm School Bus",
+            "type": "boolean"
+          },
+          "cycle2": { "title": "Cycle2", "type": "string" },
+          "exception_24_hour_restart2": {
+            "title": "Exception 24 Hour Restart2",
+            "type": "boolean"
+          },
+          "exception_8_hour_break2": {
+            "title": "Exception 8 Hour Break2",
+            "type": "boolean"
+          },
+          "exception_wait_time2": {
+            "title": "Exception Wait Time2",
+            "type": "boolean"
+          },
+          "exception_short_haul2": {
+            "title": "Exception Short Haul2",
+            "type": "boolean"
+          },
+          "exception_ca_farm_school_bus2": {
+            "title": "Exception Ca Farm School Bus2",
+            "type": "boolean"
+          },
+          "export_combined": { "title": "Export Combined", "type": "boolean" },
+          "export_recap": { "title": "Export Recap", "type": "boolean" },
+          "export_odometers": {
+            "title": "Export Odometers",
+            "type": "boolean"
+          },
+          "metric_units": { "title": "Metric Units", "type": "boolean" },
+          "username": { "title": "Username", "type": "string" },
+          "cycle": { "title": "Cycle", "type": "string" },
+          "driver_company_id": {
+            "title": "Driver Company Id",
+            "type": "string"
+          },
+          "minute_logs": { "title": "Minute Logs", "type": "boolean" },
+          "duty_status": { "title": "Duty Status", "type": "string" },
+          "eld_mode": { "title": "Eld Mode", "type": "string" },
+          "drivers_license_number": {
+            "title": "Drivers License Number",
+            "type": "string"
+          },
+          "drivers_license_state": {
+            "title": "Drivers License State",
+            "type": "string"
+          },
+          "yard_moves_enabled": {
+            "title": "Yard Moves Enabled",
+            "type": "boolean"
+          },
+          "personal_conveyance_enabled": {
+            "title": "Personal Conveyance Enabled",
+            "type": "boolean"
+          },
+          "mobile_last_active_at": {
+            "title": "Mobile Last Active At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "mobile_current_sign_in_at": {
+            "title": "Mobile Current Sign In At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "mobile_last_sign_in_at": {
+            "title": "Mobile Last Sign In At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "web_last_active_at": {
+            "title": "Web Last Active At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "role": { "title": "Role", "type": "string" },
+          "status": { "title": "Status", "type": "string" },
+          "web_current_sign_in_at": {
+            "title": "Web Current Sign In At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "web_last_sign_in_at": {
+            "title": "Web Last Sign In At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "title": "Updated At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "external_ids": {
+            "title": "External Ids",
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ExternalId" }
+          }
+        }
+      },
+      "ELDDevice": {
+        "title": "ELDDevice",
+        "type": "object",
+        "properties": {
+          "id": { "title": "Id", "type": "integer" },
+          "identifier": { "title": "Identifier", "type": "string" },
+          "model": { "title": "Model", "type": "string" }
+        }
+      },
+      "ExternalId": {
+        "title": "ExternalId",
+        "type": "object",
+        "properties": {
+          "external_id": { "title": "External Id", "type": "string" },
+          "integration_name": { "title": "Integration Name", "type": "string" }
+        }
+      },
+      "Vehicle": {
+        "title": "Vehicle",
+        "required": ["eld_device", "current_driver"],
+        "type": "object",
+        "properties": {
+          "id": { "title": "Id", "type": "integer" },
+          "company_id": { "title": "Company Id", "type": "integer" },
+          "number": { "title": "Number", "type": "string" },
+          "status": { "title": "Status", "type": "string" },
+          "ifta": { "title": "Ifta", "type": "boolean" },
+          "vin": { "title": "Vin", "type": "string" },
+          "make": { "title": "Make", "type": "string" },
+          "model": { "title": "Model", "type": "string" },
+          "year": { "title": "Year", "type": "integer" },
+          "license_plate_state": {
+            "title": "License Plate State",
+            "type": "string"
+          },
+          "license_plate_number": {
+            "title": "License Plate Number",
+            "type": "string"
+          },
+          "metric_units": { "title": "Metric Units", "type": "boolean" },
+          "fuel_type": { "title": "Fuel Type", "type": "string" },
+          "prevent_auto_odometer_entry": {
+            "title": "Prevent Auto Odometer Entry",
+            "type": "boolean"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "title": "Updated At",
+            "type": "string",
+            "format": "date-time"
+          },
+          "eld_device": { "$ref": "#/components/schemas/ELDDevice" },
+          "external_ids": {
+            "title": "External Ids",
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ExternalId" }
+          },
+          "current_driver": { "$ref": "#/components/schemas/CurrentDriver" }
+        }
+      }
+    }
+  }
+}

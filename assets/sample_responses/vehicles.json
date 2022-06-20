@@ -1,0 +1,54 @@
+{
+    "vehicles": [
+      {
+        "vehicle": {
+          "id": 4,
+          "company_id": 5,
+          "number": "Demo Vehicle",
+          "status": "active",
+          "ifta": true,
+          "vin": "WP0AB2966NS458669",
+          "make": "Demo",
+          "model": "Vehicle",
+          "year": "2016",
+          "license_plate_state": "CA",
+          "license_plate_number": "5M37250",
+          "metric_units": false,
+          "fuel_type": "diesel",
+          "prevent_auto_odometer_entry": false,
+          "created_at": "2019-01-19T20:48:57Z",
+          "updated_at": "2019-01-19T21:23:44Z",
+          "eld_device": {
+            "id": 2,
+            "identifier": "000074802542164638439715893965",
+            "model": "lbb-1"
+          },
+          "current_driver": {
+            "id": 11,
+            "first_name": "Demo",
+            "last_name": "Driver",
+            "username": "demo_driver",
+            "email": null,
+            "driver_company_id": null,
+            "status": "active",
+            "role": "driver"
+          },
+          "external_ids": [
+            {
+              "external_id": "201",
+              "integration_name": "generic_tms"
+            },
+            {
+              "external_id": "Truck123",
+              "integration_name": "generic_maintenance_system"
+            }
+          ]
+        }
+      }
+    ],
+    "pagination": {
+      "per_page": 100,
+      "page_no": 1,
+      "total": 1
+    }
+}

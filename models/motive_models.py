@@ -1,0 +1,136 @@
+from pydantic import BaseModel
+from typing import Optional
+import datetime
+
+class AcessToken(BaseModel):
+    token: str
+    token_type: str
+    expires_in: int
+    refresh_token: str
+    scope: str
+    created_at: int
+    client_ip: str
+
+class ELDDevice(BaseModel):
+    id: Optional[int]
+    identifier: Optional[str]
+    model: Optional[str]
+
+class CurrentDriver(BaseModel):
+    id: Optional[int]
+    first_name: Optional[str]
+    last_name: Optional[str]
+    username: Optional[str]
+    email: Optional[str]
+    driver_company_id: Optional[str]
+    status: Optional[str]
+    role: Optional[str]
+
+class ExternalId(BaseModel):
+    external_id: Optional[str]
+    integration_name: Optional[str]
+
+class Vehicle(BaseModel):
+    id: Optional[int]
+    company_id: Optional[int]
+    number: Optional[str]
+    status: Optional[str]
+    ifta: Optional[bool]
+    vin: Optional[str]
+    make: Optional[str]
+    model: Optional[str]
+    year: Optional[str]
+    license_plate_state: Optional[str]
+    license_plate_number: Optional[str]
+    metric_units: Optional[bool]
+    fuel_type: Optional[str]
+    prevent_auto_odometer_entry: Optional[bool]
+    created_at: Optional[datetime.datetime]
+    updated_at: Optional[datetime.datetime]
+    eld_device: Optional[ELDDevice]
+    external_ids: Optional[list[ExternalId]]
+    current_driver: Optional[CurrentDriver]
+
+
+class Driver(BaseModel):
+    id: Optional[int]
+    email: Optional[str]
+    first_name: Optional[str]
+    last_name: Optional[str]
+    phone: Optional[str]
+    phone_ext: Optional[str]
+    time_zone: Optional[str]
+    carrier_name: Optional[str]
+    carrier_street: Optional[str]
+    carrier_city: Optional[str]
+    carrier_state: Optional[str]
+    carrier_zip: Optional[str]
+    violation_alerts: Optional[str]
+    terminal_street: Optional[str]
+    terminal_city: Optional[str]
+    terminal_state: Optional[str]
+    terminal_zip: Optional[str]
+    exception_24_hour_restart: Optional[bool]
+    exception_8_hour_break: Optional[bool]
+    exception_wait_time: Optional[bool]
+    exception_short_haul: Optional[bool]
+    exception_ca_farm_school_bus: Optional[bool]
+    cycle2: Optional[str]
+    exception_24_hour_restart2: Optional[bool]
+    exception_8_hour_break2: Optional[bool]
+    exception_wait_time2: Optional[bool]
+    exception_short_haul2: Optional[bool]
+    exception_ca_farm_school_bus2: Optional[bool]
+    export_combined: Optional[bool]
+    export_recap: Optional[bool]
+    export_odometers: Optional[bool]
+    metric_units: Optional[bool]
+    username: Optional[str]
+    cycle: Optional[str]
+    driver_company_id: Optional[str]
+    minute_logs: Optional[bool]
+    duty_status: Optional[str]
+    eld_mode: Optional[str]
+    drivers_license_number: Optional[str]
+    drivers_license_state: Optional[str]
+    yard_moves_enabled: Optional[bool]
+    personal_conveyance_enabled: Optional[bool]
+    mobile_last_active_at: Optional[datetime.datetime]
+    mobile_current_sign_in_at: Optional[datetime.datetime]
+    mobile_last_sign_in_at: Optional[datetime.datetime]
+    web_last_active_at: Optional[datetime.datetime]
+    role: Optional[str]
+    status: Optional[str]
+    web_current_sign_in_at: Optional[datetime.datetime]
+    web_last_sign_in_at: Optional[datetime.datetime]
+    created_at: Optional[datetime.datetime]
+    updated_at: Optional[datetime.datetime]
+    external_ids: Optional[list[ExternalId]]
+
+class AssetGateway(BaseModel):
+    id: Optional[int]
+    identifier: Optional[str]
+    active: Optional[bool]
+
+class Asset(BaseModel):
+    id: Optional[int]
+    name: Optional[str]
+    status: Optional[str]
+    type: Optional[str]
+    custom_type: Optional[str]
+    vin: Optional[str]
+    license_plate_state: Optional[str]
+    license_plate_number: Optional[str]
+    make: Optional[str]
+    model: Optional[str]
+    year: Optional[str]
+    axle: Optional[str]
+    weight_metric_units: Optional[bool]
+    length_metric_units: Optional[bool]
+    leased: Optional[str]
+    notes: Optional[str]
+    length: Optional[str]
+    gvwr: Optional[str]
+    gawr: Optional[str]
+    asset_gateway: Optional[AssetGateway]
+    external_ids: Optional[list[ExternalId]]

@@ -1,0 +1,68 @@
+{
+    "assets": [
+      {
+        "asset": {
+          "id": 635,
+          "name": "def",
+          "status": "active",
+          "type": "low_boy",
+          "custom_type": null,
+          "vin": null,
+          "license_plate_state": null,
+          "license_plate_number": null,
+          "make": "HYUNDAI MOTOR CO LTD",
+          "model": "ZAKLAD BUDOWY I REMONTOW NACZEP WIE",
+          "year": "2013",
+          "axle": null,
+          "weight_metric_units": false,
+          "length_metric_units": false,
+          "leased": null,
+          "notes": null,
+          "length": null,
+          "gvwr": null,
+          "gawr": null,
+          "asset_gateway": {
+            "id": 698,
+            "identifier": "ATE-3NG-DDQ",
+            "active": true
+          },
+          "external_ids": []
+        }
+      },
+      {
+        "asset": {
+          "id": 634,
+          "name": "abc",
+          "status": "deactivated",
+          "type": "dry_box",
+          "custom_type": null,
+          "vin": null,
+          "license_plate_state": null,
+          "license_plate_number": null,
+          "make": "AEON MOTOR CO., LTD.",
+          "model": "ZAKLAD BUDOWY I REMONTOW NACZEP WIE",
+          "year": "2010",
+          "axle": null,
+          "weight_metric_units": false,
+          "length_metric_units": false,
+          "leased": null,
+          "notes": null,
+          "length": null,
+          "gvwr": null,
+          "gawr": null,
+          "asset_gateway": null,
+          "external_ids": [
+            {
+              "external_id": "123",
+              "integration_name": "tmw_tmt"
+            }
+          ]
+        }
+      }
+    ],
+    "pagination": {
+      "per_page": 25,
+      "page_no": 1,
+      "total": 2
+    }
+  }

@@ -36,7 +36,7 @@ async def vehicles(response: Response):
     if not all_vehicles:
         response.status_code = 204
 
-    return all_vehicles
+    return {'vehicles': all_vehicles}
 
 @app.get(
     '/drivers', 
@@ -63,7 +63,7 @@ async def drivers(response: Response):
     if not all_drivers:
         response.status_code = 204
 
-    return all_drivers
+    return {'drivers': all_drivers}
 
 @app.get(
     '/assets', 
@@ -90,7 +90,7 @@ async def assets(response: Response):
     if not all_assets:
         response.status_code = 204
 
-    return all_assets
+    return {'assets': all_assets}
 
 @app.get('/auth')
 def auth():

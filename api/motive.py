@@ -84,6 +84,7 @@ class MotiveAPI():
 
         try:
             token = res.json()['access_token']
+            # Would store the newly generated key in a file system here
             return token
         except:
             return os.getenv('TOKEN')

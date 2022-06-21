@@ -61,7 +61,8 @@ class MotiveAPI():
             'client_id': self.CLIENT_ID,
             'client_secret': self.CLIENT_SECRET
         }
-        res = requests.post(url=url, data=data)
+        # res = requests.post(url=url, data=data)
+        return os.getenv('TOKEN')
         try:
             token = res.json()['access_token']
             return token

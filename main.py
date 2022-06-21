@@ -94,7 +94,7 @@ async def assets(response: Response):
 
 @app.get('/auth')
 def auth():
-    uri = MotiveAPI().auth()
+    uri = MotiveAPI(request_type='install').auth()
     return {"message": f"Please install app at following link {uri}"}
 
 @app.post('/token', status_code=200)

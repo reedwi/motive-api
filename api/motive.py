@@ -54,7 +54,7 @@ class MotiveAPI():
 
     def get_refresh(self):
         # CHeck if access token is still valid
-        url = f'{self.base_url}{self.item}'
+        url = 'https://api.gomotive.com/v1/vehicles'
         params = {
             'per_page': 1,
             'page_no': 1
@@ -68,7 +68,6 @@ class MotiveAPI():
             headers=headers,
             params=params
         )
-        pprint(api_req)
         if api_req.status_code == 200:
             return os.getenv('TOKEN')
 
@@ -97,7 +96,6 @@ class MotiveAPI():
         }
         items = []
         while self.has_more:
-            pprint(self.headers)
             api_req = requests.get(
                 url=url,
                 headers=self.headers,

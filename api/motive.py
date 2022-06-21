@@ -76,6 +76,7 @@ class MotiveAPI():
         }
         items = []
         while self.has_more:
+            pprint(self.headers)
             api_req = requests.get(
                 url=url,
                 headers=self.headers,

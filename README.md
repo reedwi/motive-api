@@ -1,5 +1,5 @@
 # Motive API Wrapper
-Small Python application that allows user to get all vehicles, drivers, and assets from the [Motive API](https://developer.gomotive.com/reference/introduction) within their account. App is located [here](https://motive-api.herokuapp.com/docs) 
+Small Python application that allows user to get all vehicles, drivers (technically is all users, but could be filtered down to only role = driver if need be), and assets from the [Motive API](https://developer.gomotive.com/reference/introduction) within their account. App is located [here](https://motive-api.herokuapp.com/docs) 
 
 ## Considerations
 Because of how the Motive developer app is setup and the losing of context between my app and pipedream, the app is broken into two general pieces, Install and Ongoing. 

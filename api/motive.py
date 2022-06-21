@@ -68,6 +68,7 @@ class MotiveAPI():
             headers=headers,
             params=params
         )
+        pprint(api_req)
         if api_req.status_code == 200:
             return os.getenv('TOKEN')
 

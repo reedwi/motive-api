@@ -53,6 +53,25 @@ class MotiveAPI():
         return uri
 
     def get_refresh(self):
+        # CHeck if access token is still valid
+        url = f'{self.base_url}{self.item}'
+        params = {
+            'per_page': 1,
+            'page_no': 1
+        }
+        headers = {
+            'Authorization': f'Bearer {os.getenv("TOKEN")}',
+            'Accept': 'application/json'
+        }
+        api_req = requests.get(
+            url=url,
+            headers=headers,
+            params=params
+        )
+        if api_req.status_code == 200:
+            return os.getenv('TOKEN')
+
+        # Generate new access token
         url = 'https://api.gomotive.com/oauth/token'
         data = {
             'grant_type': 'refresh_token',
@@ -61,8 +80,8 @@ class MotiveAPI():
             'client_id': self.CLIENT_ID,
             'client_secret': self.CLIENT_SECRET
         }
-        # res = requests.post(url=url, data=data)
-        return os.getenv('TOKEN')
+        res = requests.post(url=url, data=data)
+
         try:
             token = res.json()['access_token']
             return token

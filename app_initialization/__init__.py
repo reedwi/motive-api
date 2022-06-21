@@ -7,7 +7,15 @@ def create_app():
     Gets all vehicles in the account
 
     ## Drivers
-    Gets all drivers in the account
+    Gets all users in the account
+
+    ## Assets
+    Gets all assets in the account
+
+    ## Install
+    To install the app, navigate to /auth. There will be a URL in the response. Use this URL to install the app. This 
+    then hits the Pipedream webhook to generate a token. Upon completion it will then send all Users, Vehicles, and Assets to the second
+    pipedream workflow I have in the pipdream account currently.
     '''
 
     app = FastAPI(
